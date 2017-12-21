@@ -428,7 +428,7 @@ def print_items_in_second_half(sequence):
       100
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # Done: 6. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # IMPORTANT: Don't get hung up on dealing with the middle item
@@ -438,8 +438,11 @@ def print_items_in_second_half(sequence):
     # IMPORTANT: RANGE expressions need INTEGERS.
     #   Use   //   for integer division.
     # ------------------------------------------------------------------
-    for k in range(len(sequence)//2, len(sequence)):
-        if k % 2 == 1:
+    if len(sequence) % 2 == 0:
+        for k in range(len(sequence)//2, len(sequence)):
+            print(sequence[k])
+    if len(sequence) % 2 == 1:
+        for k in range(len(sequence)//2, len(sequence)):
             print(sequence[k])
 
 # ----------------------------------------------------------------------
